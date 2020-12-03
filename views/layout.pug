@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet")
+    
+  body
+    .row.text-center
+        .col-md-4 
+            img(src="/images/pakistan.png", width="150" height="90" alt="Pakistan" class="img-fluid rounded")
+        .col-md-4
+            h5.text-center Web Technologies 2 - Hasan Ali Khattak - SEECS - NUST
+        .col-md-4
+            img(src="/images/nust.png", alt="NUST Logo" width="90" height="90" class="img-fluid rounded")
+    div.container-md
+      block content
+      .container-fluid.text-center  
+                .row
+                    .col-sm
+                        button(class="btn btn-link" type="button" onclick="toggleDemo()") Khattak Informatics <i class="fa fa-copyright" aria-hidden="true"></i> 2016-2020
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js", integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV", crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js")
+    script(src="https://kit.fontawesome.com/a93d7a240e.js")
+    script(src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous")
+    script(src="/javascripts/myscript.js")

@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-lg.text-center
+                a(href="/users" class="btn btn-active btn-lg") All Users
+    div.text-center
+        -data = data || {}
+        if errors
+            ul
+                for error in errors
+                    li= error.msg
+        form(class="form-registration", action = ".", method = "POST" autocomplete="false") 
+            input(type="hidden", name="_id" value=data._id)
+            - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
+            h1(class=h1Classes) Enter User Details to be Add
+            div 
+                label(for = "name") Name: 
+                input(name = "name" class="form-control" value=data.name) 
+                br 
+            div 
+                label(for = "cgpa") CGPA: 
+                input(name = "cgpa" class="form-control" value=data.cgpa) 
+                br 
+            div 
+                label(for = "course") Course: 
+                input(name = "course" class="form-control"  value=data.course)
+                br
+            div 
+                label(for = "email") Email: 
+                input(name = "email" type = "email" class="form-control"  value=data.email)
+                br
+            div 
+                label(for = "password") Password 
+                input(name = "password" type = "password" class="form-control"  value=data.password)
+                br
+            - var buttonClass=['btn', 'btn-lg', 'btn-primary', 'btn-block', 'btn-success'];
+            button(class=buttonClass type = "submit") Create new person
+            button(class="btn btn-block btn-lg btn-warning" type = "reset") Reset Form

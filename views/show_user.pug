@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    if(type == "error") 
+        h3(style = "color:red") #{message} 
+    else 
+        h3 New User, name: #{user.name}, cgpa: #{user.cgpa} and Course: #{user.course}
+        h3 email: #{user.email}, password: #{user.password}

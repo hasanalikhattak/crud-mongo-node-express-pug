@@ -1,0 +1,39 @@
+{
+  "name": "expresslogin",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "chokidar": "^3.4.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.0",
+    "express-validator": "^6.7.0",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.11.1",
+    "morgan": "~1.9.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-node": "0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.13",
+    "nodemon": "^2.0.6",
+    "webpack": "^5.9.0"
+  }
+}
