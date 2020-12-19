@@ -50,7 +50,7 @@ function updateUser(req, res){
   if(errors.isEmpty()){
    User.findOneAndUpdate({_id: req.body._id}, {$set:req.body}, {new: true}, (err, doc) => {
       if (err) {
-          console.log("Something wrong when updating data!");
+          console.log("Update Operation failed!");
       }
 
       res.redirect('/users');
