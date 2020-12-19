@@ -48,13 +48,12 @@ router.post('/',[
 function updateUser(req, res){
   const errors = validationResult(req);
   if(errors.isEmpty()){
-    User.findOneAndUpdate({_id: req.body._id}, req.body, {new: true}, (err, user) => {
-      if(!err) {
-        req.redirect('/users');
-      } else{
-        console.log(err);
-        
-      }
+    User.findOneAndUpdate({_id: req.body._id}, {$set:req.body}, {new: true}, (err, doc) =>
+{
+       if (err) {
+           console.log("Data Update Failed!");
+       }
+       res.redirect('/users');
     });
   }
 }
