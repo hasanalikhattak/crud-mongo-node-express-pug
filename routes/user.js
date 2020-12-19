@@ -21,4 +21,17 @@ router.post('/user', function(req, res, next){
         }); 
     }
 });
+
+router.put('/user/:id', (req, res, next)=>{
+    User.findOneAndUpdate(
+        console.log(req.body)
+    )
+    .then( doc => {
+        res.status(200).render('show_message', {message: 'user updated', type: 'success'})
+    })
+    .catch( err => {
+        res.status(500).render('show_message', { message: 'error updating data', type: 'error'})
+    })
+})
+
 module.exports = router;
