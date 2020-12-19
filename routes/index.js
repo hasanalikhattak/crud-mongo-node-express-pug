@@ -86,10 +86,12 @@ function insertUser(req, res){
 }
 
 router.get('/user/:id', (req, res) => {
-  User.findById(req.params.id, (err, user) => {
-    if(!err){
-      res.render('index', {title: 'Update User', data: user});
-    }
+  User.findOneAndUpdate({_id: req.body._id}, {$set:req.body}, {new: true}, (err, doc) => {
+      if (err) {
+          console.log("Something wrong when updating data!");
+      }
+
+      res.redirect('/users');
   });
 });
 
