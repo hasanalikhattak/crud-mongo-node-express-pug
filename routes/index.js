@@ -48,14 +48,15 @@ router.post('/',[
 function updateUser(req, res){
   const errors = validationResult(req);
   if(errors.isEmpty()){
-    User.findOneAndUpdate({_id: req.body._id}, req.body, {new: true}, (err, user) => {
-      if(!err) {
-        req.redirect('/users');
-      } else{
+    User.findOneAndUpdate({_id: req.body._id}, req.body, {new: true})
+      .then((err, user) => {
+        console.log(req.body)
+        res.status(200).redirect('/users');
+      })
+      .catch( err => {
         console.log(err);
-        
-      }
-    });
+      })
+    
   }
 }
 
@@ -92,6 +93,11 @@ router.get('/user/:id', (req, res) => {
     }
   });
 });
+
+router.post('/user', (req, res) => {  
+    updateUser(req, res);
+  } 
+)
 
 router.get('/user/delete/:id', (req, res, next) => {
   User.findByIdAndRemove(req.params.id, (err, doc) =>{
