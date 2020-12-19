@@ -11,7 +11,7 @@ block content
             ul
                 for error in errors
                     li= error.msg
-        form(class="form-registration", action = ".", method = "POST" autocomplete="false") 
+        form(class="form-registration", action = "/", method = "POST" autocomplete="false") 
             input(type="hidden", name="_id" value=data._id)
             - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
             h1(class=h1Classes) Enter User Details to be Add
